@@ -108,8 +108,16 @@
     transition:
         transform 0.4s var(--ease),
         box-shadow var(--duration-medium) var(--ease);
-    cursor: default;
+    cursor: pointer;
     animation: floatObject 8s ease-in-out infinite;
+    text-decoration: none;
+    color: inherit;
+}
+
+a.ecosystem-tile:focus-visible {
+    outline: none;
+    box-shadow: var(--shadow-lg), var(--focus-ring);
+    z-index: 10;
 }
 
 .ecosystem-tile:hover {

@@ -133,7 +133,15 @@
 
 .btn:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(91, 108, 255, 0.3);
+    box-shadow: var(--focus-ring);
+}
+
+.btn:disabled,
+.btn.is-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    pointer-events: none;
 }
 
 /* ==========================
@@ -206,6 +214,11 @@
     color: var(--accent-primary);
 }
 
+.badge--muted {
+    background: rgba(107, 114, 128, 0.12);
+    color: var(--text-muted);
+}
+
 .chip {
     display: inline-flex;
     align-items: center;
@@ -223,6 +236,28 @@
 
 .chip:hover {
     transform: translateY(-4px);
+}
+
+.chip:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+}
+
+.chip:disabled,
+.chip.is-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.badge--warning {
+    background: #fffbeb;
+    color: #b45309;
+}
+
+.badge--error {
+    background: #fef2f2;
+    color: var(--accent-error);
 }
 
 /* ==========================
@@ -293,7 +328,7 @@
 
 .dock-item:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(91, 108, 255, 0.3);
+    box-shadow: var(--focus-ring);
 }
 
 /* ==========================
@@ -432,6 +467,14 @@
     transform-style: preserve-3d;
     transition: transform 0.18s ease-out;
     cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.hero-card:focus-visible {
+    outline: none;
+    box-shadow: var(--shadow-lg), var(--focus-ring);
 }
 
 .hero-card::before {

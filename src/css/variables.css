@@ -74,6 +74,16 @@
     --content-width: 1440px;
     --text-width: 760px;
 
+    /* Breakpoints (Desktop First) */
+    --bp-wide: 1600px;
+    --bp-desktop: 1440px;
+    --bp-laptop: 1280px;
+    --bp-tablet: 1024px;
+    --bp-mobile: 768px;
+
+    /* Focus ring */
+    --focus-ring: 0 0 0 3px rgba(91, 108, 255, 0.35);
+
     /* Motion */
     --ease: cubic-bezier(0.22, 1, 0.36, 1);
     --duration-micro: 150ms;

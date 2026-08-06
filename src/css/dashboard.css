@@ -143,6 +143,24 @@
     padding: var(--space-4);
 }
 
+.widget-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+}
+
+.widget-link:hover .widget__title,
+.widget-link:focus-visible .widget__title {
+    color: var(--accent-primary);
+}
+
+.widget-link:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+    border-radius: var(--radius-lg);
+}
+
 .widget__title {
     font-size: var(--font-caption);
     color: var(--text-secondary);

@@ -47,12 +47,13 @@
                         <a href="cards.html" class="chip">💳 Карты</a>
                         <a href="promotions.html" class="chip">🔥 Акции</a>
                         <a href="services.html" class="chip">🧭 Сервисы</a>
+                        <a href="documents.html" class="chip">📄 Документы</a>
                     </div>
                 </section>
 
                 <section class="dashboard-visual" aria-label="Карта жителя">
                     <div class="hero-stage">
-                        <div class="hero-card" tabindex="0" role="button" aria-label="Карта жителя •••• 4589, активна">
+                        <a href="cards.html" class="hero-card" aria-label="Карта жителя •••• 4589, активна — открыть раздел карт">
                             <div class="card-inner">
                                 <div class="flex-between">
                                     <div class="card-chip" aria-hidden="true"></div>
@@ -64,7 +65,7 @@
                                     <span class="badge badge--success">● Активна</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
                         <aside class="today-panel" aria-label="Статистика за сегодня">
                             <h4>Сегодня</h4>
@@ -89,54 +90,63 @@
                 </section>
             </main>
 
-            <!-- Widgets -->
             <section class="dashboard-widgets" aria-label="Виджеты">
-                <div class="glass-panel widget reveal">
-                    <div class="widget__title">Активные льготы</div>
-                    <div class="widget__value">12</div>
-                    <ul class="widget__list">
-                        <li><span>Транспорт</span><span class="badge badge--primary">Активна</span></li>
-                        <li><span>Медицина</span><span class="badge badge--primary">Активна</span></li>
-                        <li><span>Культура</span><span class="badge badge--primary">Активна</span></li>
-                    </ul>
-                </div>
+                <a href="benefits.html" class="widget-link reveal">
+                    <div class="glass-panel widget">
+                        <div class="widget__title">Активные льготы</div>
+                        <div class="widget__value">12</div>
+                        <ul class="widget__list">
+                            <li><span>Транспорт</span><span class="badge badge--primary">Активна</span></li>
+                            <li><span>Медицина</span><span class="badge badge--primary">Активна</span></li>
+                            <li><span>Культура</span><span class="badge badge--primary">Активна</span></li>
+                        </ul>
+                    </div>
+                </a>
 
-                <div class="glass-panel widget reveal">
-                    <div class="widget__title">Персональные акции</div>
-                    <div class="widget__value">8</div>
-                    <ul class="widget__list">
-                        <li><span>Скидка 20% — Аптеки</span></li>
-                        <li><span>Кэшбэк 5% — Кафе</span></li>
-                        <li><span>Бесплатный проезд</span></li>
-                    </ul>
-                </div>
+                <a href="promotions.html" class="widget-link reveal">
+                    <div class="glass-panel widget">
+                        <div class="widget__title">Персональные акции</div>
+                        <div class="widget__value">8</div>
+                        <ul class="widget__list">
+                            <li><span>Скидка 20% — Аптеки</span></li>
+                            <li><span>Кэшбэк 5% — Кафе</span></li>
+                            <li><span>Бесплатный проезд</span></li>
+                        </ul>
+                    </div>
+                </a>
 
-                <div class="glass-panel widget reveal">
-                    <div class="widget__title">Документы</div>
-                    <div class="widget__value">5</div>
-                    <ul class="widget__list">
-                        <li><span>Паспорт</span><span>✓</span></li>
-                        <li><span>СНИЛС</span><span>✓</span></li>
-                        <li><span>Полис ОМС</span><span>✓</span></li>
-                    </ul>
-                </div>
+                <a href="documents.html" class="widget-link reveal">
+                    <div class="glass-panel widget">
+                        <div class="widget__title">Документы</div>
+                        <div class="widget__value">5</div>
+                        <ul class="widget__list">
+                            <li><span>Паспорт</span><span>✓</span></li>
+                            <li><span>СНИЛС</span><span>✓</span></li>
+                            <li><span>Полис ОМС</span><span>✓</span></li>
+                        </ul>
+                    </div>
+                </a>
 
-                <div class="glass-panel widget reveal">
-                    <div class="widget__title">Рекомендации</div>
-                    <ul class="widget__list" style="margin-top: 8px">
-                        <li><span>Записаться к врачу</span></li>
-                        <li><span>Оформить льготу на ЖКХ</span></li>
-                        <li><span>Посмотреть новые акции</span></li>
-                    </ul>
-                </div>
+                <a href="services.html" class="widget-link reveal">
+                    <div class="glass-panel widget">
+                        <div class="widget__title">Рекомендации</div>
+                        <ul class="widget__list" style="margin-top: 8px">
+                            <li><span>Записаться к врачу</span></li>
+                            <li><span>Оформить льготу на ЖКХ</span></li>
+                            <li><span>Посмотреть новые акции</span></li>
+                        </ul>
+                    </div>
+                </a>
 
-                <div class="glass-panel widget reveal">
-                    <div class="widget__title">Последние уведомления</div>
-                    <ul class="widget__list" style="margin-top: 8px">
-                        <li><span>Новая акция — Аптеки</span></li>
-                        <li><span>Обновлён полис ОМС</span></li>
-                    </ul>
-                </div>
+                <a href="notifications.html" class="widget-link reveal">
+                    <div class="glass-panel widget">
+                        <div class="widget__title">Последние уведомления</div>
+                        <ul class="widget__list" style="margin-top: 8px">
+                            <li><span>Новая акция — Аптеки</span></li>
+                            <li><span>Обновлён полис ОМС</span></li>
+                        </ul>
+                    </div>
+                </a>
 
                 <div class="glass-panel widget reveal">
                     <div class="widget__title">История активности</div>
@@ -167,20 +177,13 @@
             </section>
         </div>
 
-        <!-- Dock -->
-        <nav class="dock" aria-label="Основная навигация">
-            <div class="dock-item dock-item--active" data-page="dashboard.html" role="link" tabindex="0" aria-label="Главная" aria-current="page">🏠</div>
-            <div class="dock-item" data-page="cards.html" role="link" tabindex="0" aria-label="Карты">💳</div>
-            <div class="dock-item" data-page="benefits.html" role="link" tabindex="0" aria-label="Льготы">🎁</div>
-            <div class="dock-item" data-page="services.html" role="link" tabindex="0" aria-label="Сервисы">🧭</div>
-            <div class="dock-item" data-page="profile.html" role="link" tabindex="0" aria-label="Профиль">👤</div>
-        </nav>
+        <nav class="dock" aria-label="Основная навигация"></nav>
 
         <!-- Command Palette -->
-        <div class="command-palette" role="dialog" aria-label="Быстрый поиск" aria-hidden="true">
+        <div class="command-palette" role="dialog" aria-label="Spotlight Search" aria-hidden="true">
             <div class="command-palette__box">
-                <input class="command-palette__input" type="search" placeholder="Поиск по продукту…" aria-label="Поиск" />
-                <div class="command-palette__hint">Esc — закрыть · Cmd+K — открыть</div>
+                <input class="command-palette__input" type="search" placeholder="Поиск по всему продукту…" aria-label="Поиск" />
+                <div class="command-palette__hint">↑↓ — навигация · Enter — открыть · Esc — закрыть</div>
             </div>
         </div>
 

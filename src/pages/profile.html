@@ -10,17 +10,31 @@
     </head>
     <body data-page="profile">
         <div class="bg" aria-hidden="true"><div class="orb"></div><div class="orb"></div><div class="orb"></div><div class="bg-grid"></div></div>
+        <div class="cursor-light" aria-hidden="true"></div>
 
         <div class="section-page">
             <header class="topbar">
                 <a href="dashboard.html" class="logo"><div class="logo-mark"></div><span>Resident Card</span></a>
+                <div class="flex-center" style="gap: 16px">
+                    <button class="chip" aria-label="Поиск (Cmd+K)">🔍 Поиск</button>
+                    <button class="chip" aria-label="Уведомления">🔔</button>
+                </div>
             </header>
 
             <div class="profile-header reveal">
                 <div class="profile-avatar" aria-hidden="true"></div>
                 <div>
                     <h1 style="font-size: 40px; font-weight: 900; letter-spacing: -2px">Александр</h1>
-                    <p style="color: var(--text-secondary); margin-top: 8px">Уровень доверия: <strong style="color: var(--accent-primary)">Высокий</strong></p>
+                    <p style="color: var(--text-secondary); margin-top: 8px">alexander@resident.card · Москва</p>
+                    <div class="trust-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Уровень доверия">
+                        <div class="trust-bar__label">
+                            <span>Уровень доверия</span>
+                            <strong style="color: var(--accent-primary)">Высокий</strong>
+                        </div>
+                        <div class="trust-bar__track">
+                            <div class="trust-bar__fill" style="width: 85%"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -39,37 +53,99 @@
                 </div>
             </div>
 
-            <div class="catalog-grid">
-                <div class="glass-panel catalog-card reveal">
-                    <div class="catalog-card__icon">🔐</div>
-                    <div class="catalog-card__title">Безопасность</div>
-                    <div class="catalog-card__desc">Двухфакторная аутентификация, устройства, история входов</div>
+            <div class="quick-actions reveal" style="margin-bottom: var(--space-8)">
+                <a href="documents.html" class="chip">📄 Документы</a>
+                <a href="notifications.html" class="chip">🔔 Уведомления</a>
+                <a href="settings.html" class="chip">⚙️ Настройки</a>
+            </div>
+
+            <div class="section-block">
+                <h2 class="section-block__title">Устройства</h2>
+                <div class="device-list">
+                    <div class="device-item">
+                        <div class="device-item__icon">📱</div>
+                        <div class="device-item__info">
+                            <strong>iPhone 15 Pro</strong>
+                            <small>Активно сейчас · iOS 18</small>
+                        </div>
+                        <span class="badge badge--success">Текущее</span>
+                    </div>
+                    <div class="device-item">
+                        <div class="device-item__icon">💻</div>
+                        <div class="device-item__info">
+                            <strong>MacBook Pro</strong>
+                            <small>Последний вход — вчера · macOS</small>
+                        </div>
+                    </div>
                 </div>
-                <div class="glass-panel catalog-card reveal">
-                    <div class="catalog-card__icon">📱</div>
-                    <div class="catalog-card__title">Устройства</div>
-                    <div class="catalog-card__desc">iPhone 15, MacBook Pro — 2 активных</div>
+            </div>
+
+            <div class="section-block">
+                <h2 class="section-block__title">История активности</h2>
+                <div class="history-list">
+                    <div class="history-item">
+                        <div>
+                            <div class="history-item__title">Использована льгота «Транспорт»</div>
+                            <div class="history-item__meta">2 часа назад · iPhone</div>
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div>
+                            <div class="history-item__title">Открыт документ «Паспорт»</div>
+                            <div class="history-item__meta">Вчера · MacBook</div>
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div>
+                            <div class="history-item__title">Активирована акция «Кафе»</div>
+                            <div class="history-item__meta">3 дня назад · iPhone</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="glass-panel catalog-card reveal">
-                    <div class="catalog-card__icon">📊</div>
-                    <div class="catalog-card__title">История активности</div>
-                    <div class="catalog-card__desc">Последние действия в экосистеме</div>
-                </div>
-                <div class="glass-panel catalog-card reveal">
-                    <div class="catalog-card__icon">⚙️</div>
-                    <div class="catalog-card__title">Настройки</div>
-                    <div class="catalog-card__desc">Аккаунт, уведомления, конфиденциальность, интерфейс</div>
+            </div>
+
+            <div class="section-block">
+                <h2 class="section-block__title">Настройки и безопасность</h2>
+                <div class="catalog-grid">
+                    <a href="notifications.html" class="glass-panel catalog-card reveal" style="text-decoration: none; color: inherit">
+                        <div class="catalog-card__icon">📬</div>
+                        <div class="catalog-card__title">Центр уведомлений</div>
+                        <div class="catalog-card__desc">Все события экосистемы — акции, документы, льготы</div>
+                    </a>
+                    <a href="settings.html#security" class="glass-panel catalog-card reveal" style="text-decoration: none; color: inherit">
+                        <div class="catalog-card__icon">🔐</div>
+                        <div class="catalog-card__title">Безопасность</div>
+                        <div class="catalog-card__desc">Двухфакторная аутентификация, биометрия, история входов</div>
+                        <div class="catalog-card__meta"><span class="badge badge--success">2FA включена</span></div>
+                    </a>
+                    <a href="settings.html#notifications" class="glass-panel catalog-card reveal" style="text-decoration: none; color: inherit">
+                        <div class="catalog-card__icon">🔔</div>
+                        <div class="catalog-card__title">Уведомления</div>
+                        <div class="catalog-card__desc">Push, email, SMS — настройка категорий</div>
+                    </a>
+                    <a href="settings.html#interface" class="glass-panel catalog-card reveal" style="text-decoration: none; color: inherit">
+                        <div class="catalog-card__icon">🎨</div>
+                        <div class="catalog-card__title">Интерфейс</div>
+                        <div class="catalog-card__desc">Тема, размер текста, анимации</div>
+                    </a>
+                    <a href="settings.html#privacy" class="glass-panel catalog-card reveal" style="text-decoration: none; color: inherit">
+                        <div class="catalog-card__icon">🔒</div>
+                        <div class="catalog-card__title">Конфиденциальность</div>
+                        <div class="catalog-card__desc">Управление данными, экспорт, удаление аккаунта</div>
+                    </a>
                 </div>
             </div>
         </div>
 
-        <nav class="dock" aria-label="Навигация">
-            <div class="dock-item" data-page="dashboard.html" tabindex="0">🏠</div>
-            <div class="dock-item" data-page="cards.html" tabindex="0">💳</div>
-            <div class="dock-item" data-page="benefits.html" tabindex="0">🎁</div>
-            <div class="dock-item" data-page="services.html" tabindex="0">🧭</div>
-            <div class="dock-item dock-item--active" data-page="profile.html" tabindex="0" aria-current="page">👤</div>
-        </nav>
+        <nav class="dock" aria-label="Основная навигация"></nav>
+
+        <div class="command-palette" role="dialog" aria-label="Spotlight Search" aria-hidden="true">
+            <div class="command-palette__box">
+                <input class="command-palette__input" type="search" placeholder="Поиск по всему продукту…" aria-label="Поиск" />
+                <div class="command-palette__hint">↑↓ — навигация · Enter — открыть · Esc — закрыть</div>
+            </div>
+        </div>
+
         <script type="module" src="../js/app.js"></script>
     </body>
 </html>

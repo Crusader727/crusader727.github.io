@@ -10,65 +10,140 @@
     </head>
     <body data-page="promotions">
         <div class="bg" aria-hidden="true"><div class="orb"></div><div class="orb"></div><div class="orb"></div><div class="bg-grid"></div></div>
+        <div class="cursor-light" aria-hidden="true"></div>
 
         <div class="section-page">
             <header class="topbar">
                 <a href="dashboard.html" class="logo"><div class="logo-mark"></div><span>Resident Card</span></a>
+                <div class="flex-center" style="gap: 16px">
+                    <button class="chip" aria-label="Поиск (Cmd+K)">🔍 Поиск</button>
+                    <button class="chip" aria-label="Уведомления">🔔</button>
+                    <div class="user-pill"><div class="avatar" aria-hidden="true"></div><div><strong>Александр</strong></div></div>
+                </div>
             </header>
 
             <section class="section-hero">
                 <div class="tag">Promotions</div>
                 <h1>Акции</h1>
-                <p>Персональные предложения партнёров региона. Большие баннеры, подборки и избранное.</p>
+                <p>Персональные предложения партнёров региона — большие баннеры, подборки и избранное.</p>
             </section>
 
-            <div class="filter-bar">
-                <button class="chip chip--active">Все</button>
-                <button class="chip">Популярные</button>
-                <button class="chip">Новые</button>
-                <button class="chip">Локальные</button>
-                <button class="chip">Избранное</button>
+            <div class="catalog-grid" style="margin-bottom: var(--space-6)">
+                <div class="glass-panel banner-large reveal">
+                    <h3>Сезонная подборка</h3>
+                    <p>Лучшие предложения августа от 120+ партнёров региона — скидки, кэшбэк и бонусы</p>
+                </div>
+            </div>
+
+            <div class="promo-row">
+                <div class="promo-row__header">
+                    <h3>Популярное</h3>
+                    <a href="promotions.html" class="chip">Все →</a>
+                </div>
+                <div class="promo-row__scroll">
+                    <div class="glass-panel promo-row__item catalog-card" data-category="popular" data-favoritable="true">
+                        <button class="catalog-card__fav is-favorite" aria-pressed="true" aria-label="Убрать из избранного">★</button>
+                        <div class="catalog-card__icon">💊</div>
+                        <div class="catalog-card__title">Аптеки — 20%</div>
+                        <div class="catalog-card__desc">На все лекарства</div>
+                        <div class="catalog-card__meta"><span class="badge badge--primary">До 31 авг</span></div>
+                    </div>
+                    <div class="glass-panel promo-row__item catalog-card" data-category="popular" data-favoritable="true">
+                        <button class="catalog-card__fav" aria-pressed="false" aria-label="В избранное">☆</button>
+                        <div class="catalog-card__icon">☕</div>
+                        <div class="catalog-card__title">Кафе — 5%</div>
+                        <div class="catalog-card__desc">Кэшбэк в сети</div>
+                        <div class="catalog-card__meta"><span class="badge badge--primary">Популярное</span></div>
+                    </div>
+                    <div class="glass-panel promo-row__item catalog-card" data-category="popular" data-favoritable="true">
+                        <button class="catalog-card__fav" aria-pressed="false" aria-label="В избранное">☆</button>
+                        <div class="catalog-card__icon">🛒</div>
+                        <div class="catalog-card__title">Супермаркеты</div>
+                        <div class="catalog-card__desc">10% по выходным</div>
+                        <div class="catalog-card__meta"><span class="badge badge--primary">Новое</span></div>
+                    </div>
+                    <div class="glass-panel promo-row__item catalog-card" data-category="popular" data-favoritable="true">
+                        <button class="catalog-card__fav" aria-pressed="false" aria-label="В избранное">☆</button>
+                        <div class="catalog-card__icon">🎬</div>
+                        <div class="catalog-card__title">Кино 2=1</div>
+                        <div class="catalog-card__desc">Кинотеатры-партнёры</div>
+                        <div class="catalog-card__meta"><span class="badge badge--primary">Локальное</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-bar" role="group" aria-label="Фильтр акций">
+                <button class="chip chip--active" data-filter="all">Все</button>
+                <button class="chip" data-filter="popular">Популярные</button>
+                <button class="chip" data-filter="new">Новые</button>
+                <button class="chip" data-filter="local">Локальные</button>
+                <button class="chip" data-filter="favorite">Избранное</button>
             </div>
 
             <div class="catalog-grid">
-                <div class="glass-panel banner-large reveal">
-                    <h3>Сезонная подборка</h3>
-                    <p>Лучшие предложения этого месяца от партнёров региона</p>
-                </div>
-                <div class="glass-panel catalog-card reveal">
+                <div class="glass-panel catalog-card reveal" data-category="popular new" data-favoritable="true">
+                    <button class="catalog-card__fav" aria-pressed="false" aria-label="В избранное">☆</button>
                     <div class="catalog-card__icon">💊</div>
                     <div class="catalog-card__title">Аптеки — скидка 20%</div>
-                    <div class="catalog-card__desc">На все лекарства по карте жителя</div>
+                    <div class="catalog-card__desc">На все лекарства по карте жителя в аптеках-партнёрах</div>
                     <div class="catalog-card__meta"><span class="badge badge--primary">До 31 авг</span></div>
                 </div>
-                <div class="glass-panel catalog-card reveal">
+                <div class="glass-panel catalog-card reveal" data-category="popular" data-favoritable="true">
+                    <button class="catalog-card__fav" aria-pressed="false" aria-label="В избранное">☆</button>
                     <div class="catalog-card__icon">☕</div>
                     <div class="catalog-card__title">Кафе — кэшбэк 5%</div>
-                    <div class="catalog-card__desc">В сети партнёрских кофеен</div>
+                    <div class="catalog-card__desc">В сети партнёрских кофеен при оплате картой</div>
                     <div class="catalog-card__meta"><span class="badge badge--primary">Популярное</span></div>
                 </div>
-                <div class="glass-panel catalog-card reveal">
+                <div class="glass-panel catalog-card reveal" data-category="new" data-favoritable="true">
+                    <button class="catalog-card__fav" aria-pressed="false" aria-label="В избранное">☆</button>
                     <div class="catalog-card__icon">🛒</div>
                     <div class="catalog-card__title">Супермаркеты — 10%</div>
-                    <div class="catalog-card__desc">По выходным на продукты</div>
+                    <div class="catalog-card__desc">По выходным на продукты в магазинах региона</div>
                     <div class="catalog-card__meta"><span class="badge badge--primary">Новое</span></div>
                 </div>
-                <div class="glass-panel catalog-card reveal">
+                <div class="glass-panel catalog-card reveal" data-category="local" data-favoritable="true">
+                    <button class="catalog-card__fav" aria-pressed="false" aria-label="В избранное">☆</button>
                     <div class="catalog-card__icon">🎬</div>
                     <div class="catalog-card__title">Кино — 2 билета по цене 1</div>
-                    <div class="catalog-card__desc">В кинотеатрах-партнёрах</div>
+                    <div class="catalog-card__desc">В кинотеатрах-партнёрах по будням до 18:00</div>
                     <div class="catalog-card__meta"><span class="badge badge--primary">Локальное</span></div>
+                </div>
+                <div class="glass-panel catalog-card reveal" data-category="new local" data-favoritable="true">
+                    <button class="catalog-card__fav" aria-pressed="false" aria-label="В избранное">☆</button>
+                    <div class="catalog-card__icon">🏋️</div>
+                    <div class="catalog-card__title">Фитнес — первый месяц бесплатно</div>
+                    <div class="catalog-card__desc">Спортивные клубы региона для держателей карты</div>
+                    <div class="catalog-card__meta"><span class="badge badge--primary">Новое</span></div>
+                </div>
+                <div class="glass-panel catalog-card reveal" data-category="popular local" data-favoritable="true">
+                    <button class="catalog-card__fav" aria-pressed="false" aria-label="В избранное">☆</button>
+                    <div class="catalog-card__icon">🍕</div>
+                    <div class="catalog-card__title">Доставка еды — 15%</div>
+                    <div class="catalog-card__desc">Промокод RESIDENT на первый заказ</div>
+                    <div class="catalog-card__meta"><span class="badge badge--primary">Популярное</span></div>
+                </div>
+                <div class="empty-state" hidden>
+                    <div class="empty-state__icon">🎁</div>
+                    <h3 class="empty-state__title">Нет акций в этой категории</h3>
+                    <p class="empty-state__desc">Загляните в сезонную подборку или включите уведомления о новых предложениях</p>
+                    <div class="empty-state__actions">
+                        <button class="chip" data-filter-reset type="button">Все акции</button>
+                        <a href="settings.html#notifications" class="chip">Уведомления</a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <nav class="dock" aria-label="Навигация">
-            <div class="dock-item" data-page="dashboard.html" tabindex="0">🏠</div>
-            <div class="dock-item" data-page="cards.html" tabindex="0">💳</div>
-            <div class="dock-item" data-page="benefits.html" tabindex="0">🎁</div>
-            <div class="dock-item" data-page="services.html" tabindex="0">🧭</div>
-            <div class="dock-item" data-page="profile.html" tabindex="0">👤</div>
-        </nav>
+        <nav class="dock" aria-label="Основная навигация"></nav>
+
+        <div class="command-palette" role="dialog" aria-label="Spotlight Search" aria-hidden="true">
+            <div class="command-palette__box">
+                <input class="command-palette__input" type="search" placeholder="Поиск по всему продукту…" aria-label="Поиск" />
+                <div class="command-palette__hint">↑↓ — навигация · Enter — открыть · Esc — закрыть</div>
+            </div>
+        </div>
+
         <script type="module" src="../js/app.js"></script>
     </body>
 </html>

@@ -10,75 +10,131 @@
     </head>
     <body data-page="services">
         <div class="bg" aria-hidden="true"><div class="orb"></div><div class="orb"></div><div class="orb"></div><div class="bg-grid"></div></div>
+        <div class="cursor-light" aria-hidden="true"></div>
 
         <div class="section-page">
             <header class="topbar">
                 <a href="dashboard.html" class="logo"><div class="logo-mark"></div><span>Resident Card</span></a>
-                <button class="chip" aria-label="Поиск (Cmd+K)">🔍 Поиск</button>
+                <div class="flex-center" style="gap: 16px">
+                    <button class="chip" aria-label="Поиск (Cmd+K)">🔍 Поиск</button>
+                    <button class="chip" aria-label="Уведомления">🔔</button>
+                    <div class="user-pill"><div class="avatar" aria-hidden="true"></div><div><strong>Александр</strong></div></div>
+                </div>
             </header>
 
             <section class="section-hero">
                 <div class="tag">Services</div>
                 <h1>Сервисы региона</h1>
-                <p>Единая библиотека городских и региональных сервисов.</p>
+                <p>Единая библиотека городских и региональных сервисов — описание, статус и быстрые действия.</p>
             </section>
 
-            <div class="filter-bar">
-                <button class="chip chip--active">Все</button>
-                <button class="chip">Госуслуги</button>
-                <button class="chip">Транспорт</button>
-                <button class="chip">Медицина</button>
-                <button class="chip">Образование</button>
+            <div class="section-block">
+                <h2 class="section-block__title">Недавно использованные</h2>
+                <div class="rec-strip">
+                    <div class="glass-panel rec-card reveal">
+                        <div class="rec-card__icon">🏥</div>
+                        <div>
+                            <div class="rec-card__title">Запись к врачу</div>
+                            <div class="rec-card__desc">2 часа назад</div>
+                        </div>
+                    </div>
+                    <div class="glass-panel rec-card reveal">
+                        <div class="rec-card__icon">🚌</div>
+                        <div>
+                            <div class="rec-card__title">Транспорт</div>
+                            <div class="rec-card__desc">Сегодня утром</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-bar" role="group" aria-label="Категории сервисов">
+                <button class="chip chip--active" data-filter="all">Все</button>
+                <button class="chip" data-filter="gov">Госуслуги</button>
+                <button class="chip" data-filter="transport">Транспорт</button>
+                <button class="chip" data-filter="medicine">Медицина</button>
+                <button class="chip" data-filter="education">Образование</button>
+                <button class="chip" data-filter="housing">ЖКХ</button>
             </div>
 
             <div class="catalog-grid">
-                <div class="glass-panel catalog-card reveal">
+                <div class="glass-panel catalog-card reveal" data-category="medicine">
                     <div class="catalog-card__icon">🏥</div>
                     <div class="catalog-card__title">Запись к врачу</div>
-                    <div class="catalog-card__desc">Онлайн-запись в поликлиники региона</div>
+                    <div class="catalog-card__desc">Онлайн-запись в поликлиники и специализированные центры</div>
                     <div class="catalog-card__meta"><span class="badge badge--success">Доступен</span></div>
+                    <div class="catalog-card__actions">
+                        <button class="chip">Записаться</button>
+                        <button class="chip">История</button>
+                    </div>
                 </div>
-                <div class="glass-panel catalog-card reveal">
+                <div class="glass-panel catalog-card reveal" data-category="transport">
                     <div class="catalog-card__icon">🚌</div>
                     <div class="catalog-card__title">Транспорт</div>
                     <div class="catalog-card__desc">Расписание, оплата проезда, карта маршрутов</div>
                     <div class="catalog-card__meta"><span class="badge badge--success">Доступен</span></div>
+                    <div class="catalog-card__actions">
+                        <button class="chip">Маршруты</button>
+                        <button class="chip">Оплата</button>
+                    </div>
                 </div>
-                <div class="glass-panel catalog-card reveal">
+                <div class="glass-panel catalog-card reveal" data-category="gov">
                     <div class="catalog-card__icon">📋</div>
                     <div class="catalog-card__title">Госуслуги</div>
                     <div class="catalog-card__desc">Справки, заявления, статус обращений</div>
                     <div class="catalog-card__meta"><span class="badge badge--success">Доступен</span></div>
+                    <div class="catalog-card__actions">
+                        <button class="chip">Подать заявление</button>
+                    </div>
                 </div>
-                <div class="glass-panel catalog-card reveal">
+                <div class="glass-panel catalog-card reveal" data-category="housing">
                     <div class="catalog-card__icon">🏠</div>
                     <div class="catalog-card__title">ЖКХ</div>
-                    <div class="catalog-card__desc">Показания счётчиков, оплата, заявки</div>
+                    <div class="catalog-card__desc">Показания счётчиков, оплата, заявки на ремонт</div>
                     <div class="catalog-card__meta"><span class="badge badge--primary">Обновлён</span></div>
+                    <div class="catalog-card__actions">
+                        <button class="chip">Передать показания</button>
+                        <button class="chip">Оплатить</button>
+                    </div>
                 </div>
-                <div class="glass-panel catalog-card reveal">
+                <div class="glass-panel catalog-card reveal" data-category="education">
                     <div class="catalog-card__icon">🎓</div>
                     <div class="catalog-card__title">Образование</div>
                     <div class="catalog-card__desc">Электронный дневник, зачисление, справки</div>
                     <div class="catalog-card__meta"><span class="badge badge--success">Доступен</span></div>
+                    <div class="catalog-card__actions">
+                        <button class="chip">Дневник</button>
+                    </div>
                 </div>
-                <div class="glass-panel catalog-card reveal">
+                <div class="glass-panel catalog-card reveal" data-category="transport">
                     <div class="catalog-card__icon">🅿️</div>
                     <div class="catalog-card__title">Парковки</div>
-                    <div class="catalog-card__desc">Оплата парковки, абонементы</div>
+                    <div class="catalog-card__desc">Оплата парковки, абонементы, зоны</div>
                     <div class="catalog-card__meta"><span class="badge badge--success">Доступен</span></div>
+                    <div class="catalog-card__actions">
+                        <button class="chip">Оплатить</button>
+                    </div>
+                </div>
+                <div class="empty-state" hidden>
+                    <div class="empty-state__icon">🧭</div>
+                    <h3 class="empty-state__title">Нет сервисов в категории</h3>
+                    <p class="empty-state__desc">Выберите «Все» или посмотрите недавно использованные сервисы</p>
+                    <div class="empty-state__actions">
+                        <button class="chip" data-filter-reset type="button">Все сервисы</button>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <nav class="dock" aria-label="Навигация">
-            <div class="dock-item" data-page="dashboard.html" tabindex="0">🏠</div>
-            <div class="dock-item" data-page="cards.html" tabindex="0">💳</div>
-            <div class="dock-item" data-page="benefits.html" tabindex="0">🎁</div>
-            <div class="dock-item dock-item--active" data-page="services.html" tabindex="0" aria-current="page">🧭</div>
-            <div class="dock-item" data-page="profile.html" tabindex="0">👤</div>
-        </nav>
-        <div class="command-palette" role="dialog" aria-hidden="true"><div class="command-palette__box"><input class="command-palette__input" type="search" placeholder="Поиск сервисов…" /><div class="command-palette__hint">Esc — закрыть</div></div></div>
+        <nav class="dock" aria-label="Основная навигация"></nav>
+
+        <div class="command-palette" role="dialog" aria-label="Spotlight Search" aria-hidden="true">
+            <div class="command-palette__box">
+                <input class="command-palette__input" type="search" placeholder="Поиск по всему продукту…" aria-label="Поиск" />
+                <div class="command-palette__hint">↑↓ — навигация · Enter — открыть · Esc — закрыть</div>
+            </div>
+        </div>
+
         <script type="module" src="../js/app.js"></script>
     </body>
 </html>
