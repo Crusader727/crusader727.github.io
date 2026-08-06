@@ -1,0 +1,87 @@
+:root {
+    /* Background */
+    --bg-primary: #f6f8fc;
+    --bg-secondary: #ffffff;
+    --surface: rgba(255, 255, 255, 0.55);
+    --glass: rgba(255, 255, 255, 0.42);
+    --glass-border: rgba(255, 255, 255, 0.45);
+    --overlay: rgba(255, 255, 255, 0.18);
+
+    /* Text */
+    --text-primary: #111827;
+    --text-secondary: #667085;
+    --text-muted: #98a2b3;
+    --text-disabled: #c7ccd6;
+    --text-inverse: #ffffff;
+
+    /* Accent */
+    --accent-primary: #5b6cff;
+    --accent-secondary: #7c6dff;
+    --accent-cyan: #52d3ff;
+    --accent-success: #32d583;
+    --accent-warning: #fbbf24;
+    --accent-error: #f04438;
+
+    /* Gradients */
+    --gradient-blue: linear-gradient(135deg, #5b6cff, #52d3ff);
+    --gradient-purple: linear-gradient(135deg, #7c6dff, #5b6cff);
+    --gradient-glow: radial-gradient(circle, rgba(91, 108, 255, 0.25), transparent 70%);
+
+    /* Spacing (8px system) */
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 40px;
+    --space-6: 48px;
+    --space-8: 64px;
+    --space-10: 80px;
+    --space-12: 96px;
+    --space-16: 128px;
+    --space-20: 160px;
+    --space-24: 192px;
+
+    /* Border radius */
+    --radius-sm: 16px;
+    --radius-md: 24px;
+    --radius-lg: 32px;
+    --radius-xl: 40px;
+    --radius-hero: 56px;
+    --radius-round: 999px;
+
+    /* Shadows */
+    --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 20px 40px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 40px 80px rgba(0, 0, 0, 0.1);
+    --shadow-hero: 0 60px 140px rgba(91, 108, 255, 0.18);
+
+    /* Typography */
+    --font-family: "Inter", system-ui, -apple-system, sans-serif;
+    --font-hero-xl: clamp(90px, 7vw, 170px);
+    --font-hero: 96px;
+    --font-display: 72px;
+    --font-h1: 56px;
+    --font-h2: 40px;
+    --font-h3: 32px;
+    --font-h4: 24px;
+    --font-body-lg: 20px;
+    --font-body: 18px;
+    --font-caption: 14px;
+    --font-micro: 12px;
+
+    /* Layout */
+    --max-width: 1600px;
+    --content-width: 1440px;
+    --text-width: 760px;
+
+    /* Motion */
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --duration-micro: 150ms;
+    --duration-small: 250ms;
+    --duration-medium: 400ms;
+    --duration-large: 600ms;
+    --duration-hero: 1000ms;
+
+    /* Glass */
+    --glass-blur: blur(35px);
+}

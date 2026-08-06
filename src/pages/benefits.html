@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Льготы — Resident Card 2.0</title>
+        <link rel="stylesheet" href="../css/app.css" />
+        <link rel="stylesheet" href="../css/dashboard.css" />
+        <link rel="stylesheet" href="../css/section.css" />
+    </head>
+    <body data-page="benefits">
+        <div class="bg" aria-hidden="true"><div class="orb"></div><div class="orb"></div><div class="orb"></div><div class="bg-grid"></div></div>
+        <div class="cursor-light" aria-hidden="true"></div>
+
+        <div class="section-page">
+            <header class="topbar">
+                <a href="dashboard.html" class="logo"><div class="logo-mark"></div><span>Resident Card</span></a>
+                <button class="chip" aria-label="Поиск (Cmd+K)">🔍 Поиск</button>
+            </header>
+
+            <section class="section-hero">
+                <div class="tag">Benefits</div>
+                <h1>Льготы</h1>
+                <p>Каталог льгот региона. Фильтрация, избранное и персональные рекомендации.</p>
+            </section>
+
+            <div class="filter-bar">
+                <button class="chip chip--active">Все</button>
+                <button class="chip">Транспорт</button>
+                <button class="chip">Медицина</button>
+                <button class="chip">ЖКХ</button>
+                <button class="chip">Культура</button>
+                <button class="chip">Образование</button>
+            </div>
+
+            <div class="catalog-grid">
+                <div class="glass-panel catalog-card reveal">
+                    <div class="catalog-card__icon">🚌</div>
+                    <div class="catalog-card__title">Бесплатный проезд</div>
+                    <div class="catalog-card__desc">Общественный транспорт для льготных категорий</div>
+                    <div class="catalog-card__meta"><span class="badge badge--success">Активна</span></div>
+                </div>
+                <div class="glass-panel catalog-card reveal">
+                    <div class="catalog-card__icon">🏥</div>
+                    <div class="catalog-card__title">Медицинские услуги</div>
+                    <div class="catalog-card__desc">Льготное обслуживание в поликлиниках</div>
+                    <div class="catalog-card__meta"><span class="badge badge--success">Активна</span></div>
+                </div>
+                <div class="glass-panel catalog-card reveal">
+                    <div class="catalog-card__icon">🏠</div>
+                    <div class="catalog-card__title">Компенсация ЖКХ</div>
+                    <div class="catalog-card__desc">Частичная оплата коммунальных услуг</div>
+                    <div class="catalog-card__meta"><span class="badge badge--primary">Доступна</span></div>
+                </div>
+                <div class="glass-panel catalog-card reveal">
+                    <div class="catalog-card__icon">🎭</div>
+                    <div class="catalog-card__title">Культурные мероприятия</div>
+                    <div class="catalog-card__desc">Скидки на билеты в театры и музеи</div>
+                    <div class="catalog-card__meta"><span class="badge badge--success">Активна</span></div>
+                </div>
+                <div class="glass-panel catalog-card reveal">
+                    <div class="catalog-card__icon">🎓</div>
+                    <div class="catalog-card__title">Образование</div>
+                    <div class="catalog-card__desc">Льготы для студентов и школьников</div>
+                    <div class="catalog-card__meta"><span class="badge badge--primary">Доступна</span></div>
+                </div>
+                <div class="glass-panel catalog-card reveal">
+                    <div class="catalog-card__icon">💊</div>
+                    <div class="catalog-card__title">Лекарства</div>
+                    <div class="catalog-card__desc">Компенсация стоимости лекарственных препаратов</div>
+                    <div class="catalog-card__meta"><span class="badge badge--primary">Доступна</span></div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="dock" aria-label="Навигация">
+            <div class="dock-item" data-page="dashboard.html" tabindex="0">🏠</div>
+            <div class="dock-item" data-page="cards.html" tabindex="0">💳</div>
+            <div class="dock-item dock-item--active" data-page="benefits.html" tabindex="0" aria-current="page">🎁</div>
+            <div class="dock-item" data-page="services.html" tabindex="0">🧭</div>
+            <div class="dock-item" data-page="profile.html" tabindex="0">👤</div>
+        </nav>
+        <div class="command-palette" role="dialog" aria-hidden="true"><div class="command-palette__box"><input class="command-palette__input" type="search" placeholder="Поиск льгот…" /><div class="command-palette__hint">Esc — закрыть</div></div></div>
+        <script type="module" src="../js/app.js"></script>
+    </body>
+</html>

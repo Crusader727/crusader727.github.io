@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Сервисы — Resident Card 2.0</title>
+        <link rel="stylesheet" href="../css/app.css" />
+        <link rel="stylesheet" href="../css/dashboard.css" />
+        <link rel="stylesheet" href="../css/section.css" />
+    </head>
+    <body data-page="services">
+        <div class="bg" aria-hidden="true"><div class="orb"></div><div class="orb"></div><div class="orb"></div><div class="bg-grid"></div></div>
+
+        <div class="section-page">
+            <header class="topbar">
+                <a href="dashboard.html" class="logo"><div class="logo-mark"></div><span>Resident Card</span></a>
+                <button class="chip" aria-label="Поиск (Cmd+K)">🔍 Поиск</button>
+            </header>
+
+            <section class="section-hero">
+                <div class="tag">Services</div>
+                <h1>Сервисы региона</h1>
+                <p>Единая библиотека городских и региональных сервисов.</p>
+            </section>
+
+            <div class="filter-bar">
+                <button class="chip chip--active">Все</button>
+                <button class="chip">Госуслуги</button>
+                <button class="chip">Транспорт</button>
+                <button class="chip">Медицина</button>
+                <button class="chip">Образование</button>
+            </div>
+
+            <div class="catalog-grid">
+                <div class="glass-panel catalog-card reveal">
+                    <div class="catalog-card__icon">🏥</div>
+                    <div class="catalog-card__title">Запись к врачу</div>
+                    <div class="catalog-card__desc">Онлайн-запись в поликлиники региона</div>
+                    <div class="catalog-card__meta"><span class="badge badge--success">Доступен</span></div>
+                </div>
+                <div class="glass-panel catalog-card reveal">
+                    <div class="catalog-card__icon">🚌</div>
+                    <div class="catalog-card__title">Транспорт</div>
+                    <div class="catalog-card__desc">Расписание, оплата проезда, карта маршрутов</div>
+                    <div class="catalog-card__meta"><span class="badge badge--success">Доступен</span></div>
+                </div>
+                <div class="glass-panel catalog-card reveal">
+                    <div class="catalog-card__icon">📋</div>
+                    <div class="catalog-card__title">Госуслуги</div>
+                    <div class="catalog-card__desc">Справки, заявления, статус обращений</div>
+                    <div class="catalog-card__meta"><span class="badge badge--success">Доступен</span></div>
+                </div>
+                <div class="glass-panel catalog-card reveal">
+                    <div class="catalog-card__icon">🏠</div>
+                    <div class="catalog-card__title">ЖКХ</div>
+                    <div class="catalog-card__desc">Показания счётчиков, оплата, заявки</div>
+                    <div class="catalog-card__meta"><span class="badge badge--primary">Обновлён</span></div>
+                </div>
+                <div class="glass-panel catalog-card reveal">
+                    <div class="catalog-card__icon">🎓</div>
+                    <div class="catalog-card__title">Образование</div>
+                    <div class="catalog-card__desc">Электронный дневник, зачисление, справки</div>
+                    <div class="catalog-card__meta"><span class="badge badge--success">Доступен</span></div>
+                </div>
+                <div class="glass-panel catalog-card reveal">
+                    <div class="catalog-card__icon">🅿️</div>
+                    <div class="catalog-card__title">Парковки</div>
+                    <div class="catalog-card__desc">Оплата парковки, абонементы</div>
+                    <div class="catalog-card__meta"><span class="badge badge--success">Доступен</span></div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="dock" aria-label="Навигация">
+            <div class="dock-item" data-page="dashboard.html" tabindex="0">🏠</div>
+            <div class="dock-item" data-page="cards.html" tabindex="0">💳</div>
+            <div class="dock-item" data-page="benefits.html" tabindex="0">🎁</div>
+            <div class="dock-item dock-item--active" data-page="services.html" tabindex="0" aria-current="page">🧭</div>
+            <div class="dock-item" data-page="profile.html" tabindex="0">👤</div>
+        </nav>
+        <div class="command-palette" role="dialog" aria-hidden="true"><div class="command-palette__box"><input class="command-palette__input" type="search" placeholder="Поиск сервисов…" /><div class="command-palette__hint">Esc — закрыть</div></div></div>
+        <script type="module" src="../js/app.js"></script>
+    </body>
+</html>

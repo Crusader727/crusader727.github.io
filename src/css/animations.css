@@ -1,0 +1,107 @@
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-40px) translateX(20px);
+    }
+}
+
+@keyframes floatObject {
+    50% {
+        transform: translateY(-18px);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinReverse {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes shine {
+    0% {
+        left: -220px;
+    }
+    100% {
+        left: 650px;
+    }
+}
+
+@keyframes lightSweep {
+    0% {
+        left: -240px;
+    }
+    100% {
+        left: 280px;
+    }
+}
+
+@keyframes wheel {
+    50% {
+        transform: translateY(10px);
+        opacity: 0.2;
+    }
+}
+
+.animate-fade-up {
+    animation: fadeUp var(--duration-hero) var(--ease) both;
+}
+
+.animate-fade-down {
+    animation: fadeDown 0.9s var(--ease) both;
+}
+
+.animate-fade-in {
+    animation: fadeIn var(--duration-large) var(--ease) both;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity var(--duration-large) var(--ease),
+        transform var(--duration-large) var(--ease);
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}

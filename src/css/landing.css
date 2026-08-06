@@ -1,0 +1,298 @@
+/* ==========================
+   LANDING — Scene 01 Arrival
+========================== */
+
+.landing-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    padding: var(--space-5) var(--space-6);
+}
+
+.landing-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.landing-nav__actions {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.scene-arrival {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.scene-arrival__content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding-inline: var(--space-3);
+}
+
+.scene-arrival h1 {
+    margin-top: var(--space-4);
+    text-wrap: balance;
+}
+
+.scene-arrival .subtitle {
+    margin-top: var(--space-4);
+    font-size: var(--font-body-lg);
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: var(--text-width);
+    margin-inline: auto;
+}
+
+.scene-arrival__actions {
+    margin-top: var(--space-10);
+    display: flex;
+    gap: var(--space-3);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ==========================
+   LANDING — Scene 02 Ecosystem
+========================== */
+
+.scene-ecosystem {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-block: var(--space-16);
+}
+
+.scene-ecosystem__header {
+    text-align: center;
+    margin-bottom: var(--space-12);
+}
+
+.scene-ecosystem__header h2 {
+    margin-top: var(--space-3);
+}
+
+.scene-ecosystem__header p {
+    margin-top: var(--space-3);
+    font-size: var(--font-body-lg);
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+.ecosystem-grid {
+    position: relative;
+    width: min(1100px, 100%);
+    height: 600px;
+    margin-inline: auto;
+}
+
+.ecosystem-tile {
+    position: absolute;
+    padding: var(--space-4) var(--space-5);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-md);
+    font-weight: 600;
+    font-size: var(--font-body);
+    transition:
+        transform 0.4s var(--ease),
+        box-shadow var(--duration-medium) var(--ease);
+    cursor: default;
+    animation: floatObject 8s ease-in-out infinite;
+}
+
+.ecosystem-tile:hover {
+    box-shadow: var(--shadow-lg);
+    z-index: 10;
+}
+
+.ecosystem-tile__icon {
+    font-size: 28px;
+    margin-bottom: var(--space-1);
+}
+
+.ecosystem-tile:nth-child(1) {
+    top: 5%;
+    left: 8%;
+    animation-delay: 0s;
+}
+.ecosystem-tile:nth-child(2) {
+    top: 15%;
+    left: 55%;
+    animation-delay: 1s;
+}
+.ecosystem-tile:nth-child(3) {
+    top: 45%;
+    left: 3%;
+    animation-delay: 2s;
+}
+.ecosystem-tile:nth-child(4) {
+    top: 55%;
+    left: 40%;
+    animation-delay: 0.5s;
+}
+.ecosystem-tile:nth-child(5) {
+    top: 10%;
+    left: 78%;
+    animation-delay: 1.5s;
+}
+.ecosystem-tile:nth-child(6) {
+    top: 65%;
+    left: 70%;
+    animation-delay: 2.5s;
+}
+.ecosystem-tile:nth-child(7) {
+    top: 75%;
+    left: 20%;
+    animation-delay: 3s;
+}
+.ecosystem-tile:nth-child(8) {
+    top: 30%;
+    left: 30%;
+    animation-delay: 1.2s;
+}
+.ecosystem-tile:nth-child(9) {
+    top: 35%;
+    left: 68%;
+    animation-delay: 0.8s;
+}
+.ecosystem-tile:nth-child(10) {
+    top: 80%;
+    left: 50%;
+    animation-delay: 2.2s;
+}
+
+/* ==========================
+   LANDING — Scene 03 Dashboard Reveal
+========================== */
+
+.scene-reveal {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-block: var(--space-16);
+}
+
+.dashboard-reveal {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-10);
+    align-items: center;
+    width: 100vw;
+}
+
+.dashboard-reveal__text h2 {
+    margin-top: var(--space-3);
+    margin-bottom: var(--space-3);
+}
+
+.dashboard-reveal__text p {
+    font-size: var(--font-body-lg);
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.dashboard-preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+}
+
+.dashboard-preview .glass-panel {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    transition:
+        opacity var(--duration-large) var(--ease),
+        transform var(--duration-large) var(--ease);
+}
+
+.dashboard-preview .glass-panel.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.dashboard-preview .panel-large {
+    grid-column: span 2;
+    padding: var(--space-5);
+}
+
+.dashboard-preview .panel-value {
+    font-size: 64px;
+    font-weight: 900;
+    letter-spacing: -3px;
+    margin: var(--space-2) 0;
+}
+
+.dashboard-preview .panel-label {
+    font-size: var(--font-caption);
+    color: var(--text-secondary);
+}
+
+.dashboard-preview .panel-icon {
+    font-size: 36px;
+    margin-bottom: var(--space-2);
+}
+
+/* ==========================
+   LANDING — CTA
+========================== */
+
+.scene-cta {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-block: var(--space-16);
+}
+
+.scene-cta h2 {
+    margin-bottom: var(--space-3);
+}
+
+.scene-cta p {
+    font-size: var(--font-body-lg);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-8);
+}
+
+.scene-cta__actions {
+    display: flex;
+    gap: var(--space-3);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .ecosystem-grid {
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-3);
+        position: static;
+    }
+
+    .ecosystem-tile {
+        position: static;
+        animation: none;
+    }
+
+    .dashboard-reveal {
+        grid-template-columns: 1fr;
+    }
+
+    .landing-nav__actions .btn--glass {
+        display: none;
+    }
+}

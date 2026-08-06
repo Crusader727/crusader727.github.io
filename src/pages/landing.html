@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Resident Card 2.0</title>
+        <link rel="stylesheet" href="../css/app.css" />
+        <link rel="stylesheet" href="../css/landing.css" />
+    </head>
+    <body>
+        <div class="bg" aria-hidden="true">
+            <div class="orb"></div>
+            <div class="orb"></div>
+            <div class="orb"></div>
+            <div class="bg-grid"></div>
+        </div>
+        <div class="cursor-light" aria-hidden="true"></div>
+
+        <!-- Navigation -->
+        <nav class="landing-nav" aria-label="Главная навигация">
+            <div class="container">
+                <div class="logo">
+                    <div class="logo-mark"></div>
+                    <span>Resident Card</span>
+                </div>
+                <div class="landing-nav__actions">
+                    <a href="dashboard.html" class="btn btn--glass">Войти</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Scene 01: Arrival -->
+        <section class="scene-arrival section" id="arrival" aria-label="Приветствие">
+            <div class="scene-arrival__content animate-fade-up">
+                <div class="tag">Resident Card 2.0</div>
+                <h1 class="text-hero-xl">Ваш цифровой регион. Переосмыслен.</h1>
+                <p class="subtitle">
+                    Новый взгляд на городские сервисы, льготы, карты жителя и возможности региона. Всё собрано в одном
+                    современном пространстве.
+                </p>
+
+                <div class="identity" aria-hidden="true">
+                    <div class="identity-ring"></div>
+                    <div class="identity-ring"></div>
+                    <div class="identity-ring"></div>
+                    <div class="identity-core"></div>
+                </div>
+
+                <div class="scene-arrival__actions">
+                    <a href="dashboard.html" class="btn btn--primary">Начать →</a>
+                    <a href="#ecosystem" class="btn btn--glass">Узнать больше</a>
+                </div>
+            </div>
+
+            <div class="scroll-indicator" aria-hidden="true">
+                Scroll
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scene 02: Ecosystem -->
+        <section class="scene-ecosystem section" id="ecosystem" aria-label="Экосистема">
+            <div class="container">
+                <div class="scene-ecosystem__header reveal">
+                    <div class="tag">Экосистема</div>
+                    <h2 class="text-display">Всё важное.<br />В одном месте.</h2>
+                    <p>
+                        Карта, льготы, акции, транспорт, документы и десятки сервисов региона — в едином цифровом
+                        пространстве.
+                    </p>
+                </div>
+
+                <div class="ecosystem-grid" role="list" aria-label="Направления экосистемы">
+                    <div class="ecosystem-tile reveal" role="listitem">
+                        <div class="ecosystem-tile__icon">💳</div>
+                        Карта
+                    </div>
+                    <div class="ecosystem-tile reveal" role="listitem">
+                        <div class="ecosystem-tile__icon">🎁</div>
+                        Льготы
+                    </div>
+                    <div class="ecosystem-tile reveal" role="listitem">
+                        <div class="ecosystem-tile__icon">🔥</div>
+                        Акции
+                    </div>
+                    <div class="ecosystem-tile reveal" role="listitem">
+                        <div class="ecosystem-tile__icon">🚌</div>
+                        Транспорт
+                    </div>
+                    <div class="ecosystem-tile reveal" role="listitem">
+                        <div class="ecosystem-tile__icon">📄</div>
+                        Документы
+                    </div>
+                    <div class="ecosystem-tile reveal" role="listitem">
+                        <div class="ecosystem-tile__icon">🏥</div>
+                        Медицина
+                    </div>
+                    <div class="ecosystem-tile reveal" role="listitem">
+                        <div class="ecosystem-tile__icon">🎭</div>
+                        Культура
+                    </div>
+                    <div class="ecosystem-tile reveal" role="listitem">
+                        <div class="ecosystem-tile__icon">🏠</div>
+                        ЖКХ
+                    </div>
+                    <div class="ecosystem-tile reveal" role="listitem">
+                        <div class="ecosystem-tile__icon">🎓</div>
+                        Образование
+                    </div>
+                    <div class="ecosystem-tile reveal" role="listitem">
+                        <div class="ecosystem-tile__icon">🧭</div>
+                        Сервисы
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scene 03: Dashboard Reveal -->
+        <section class="scene-reveal section dashboard-reveal" id="reveal" aria-label="Предпросмотр продукта">
+            <div class="container">
+                <div class="dashboard-reveal">
+                    <div class="dashboard-reveal__text reveal">
+                        <div class="tag">Dashboard</div>
+                        <h2 class="text-display">Ваш личный<br />цифровой центр.</h2>
+                        <p>
+                            Карта, льготы, акции и документы — всё на одном экране. Без лишних переходов, без
+                            перегруженных списков.
+                        </p>
+                    </div>
+
+                    <div class="dashboard-preview" aria-label="Предпросмотр Dashboard">
+                        <div class="glass-panel panel-large">
+                            <div class="panel-label">Сегодня</div>
+                            <div class="panel-value">+24</div>
+                            <div class="panel-label">новых бонуса</div>
+                        </div>
+                        <div class="glass-panel">
+                            <div class="panel-icon">💳</div>
+                            <div class="panel-label">Карта активна</div>
+                        </div>
+                        <div class="glass-panel">
+                            <div class="panel-icon">🎁</div>
+                            <div class="panel-label">8 новых акций</div>
+                        </div>
+                        <div class="glass-panel">
+                            <div class="panel-icon">🛡</div>
+                            <div class="panel-label">Все льготы доступны</div>
+                        </div>
+                        <div class="glass-panel">
+                            <div class="panel-icon">📄</div>
+                            <div class="panel-label">5 документов</div>
+                        </div>
+                        <div class="glass-panel">
+                            <div class="panel-icon">👤</div>
+                            <div class="panel-label">Профиль</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="scene-cta section" id="cta" aria-label="Призыв к действию">
+            <div class="container reveal">
+                <h2 class="text-h1">Ваш регион.<br />В одном приложении.</h2>
+                <p>Начните использовать цифровую экосистему уже сегодня.</p>
+                <div class="scene-cta__actions">
+                    <a href="dashboard.html" class="btn btn--primary">Начать →</a>
+                    <a href="dashboard.html" class="btn btn--glass">Войти</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer" aria-label="Подвал">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <div class="logo">
+                            <div class="logo-mark"></div>
+                            <span>Resident Card</span>
+                        </div>
+                        <p style="margin-top: 16px; color: var(--text-secondary); font-size: 14px; max-width: 280px">
+                            Цифровая экосистема региона. Современно. Удобно. Всё в одном месте.
+                        </p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Продукт</h4>
+                        <a href="#">Карта жителя</a>
+                        <a href="#">Льготы</a>
+                        <a href="#">Акции</a>
+                        <a href="#">Сервисы</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Документы</h4>
+                        <a href="#">Пользовательское соглашение</a>
+                        <a href="#">Политика конфиденциальности</a>
+                        <a href="#">Обработка данных</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Контакты</h4>
+                        <a href="#">Поддержка</a>
+                        <a href="#">Telegram</a>
+                        <a href="#">Email</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <span>© 2026 Resident Card. Все права защищены.</span>
+                    <span>v2.0</span>
+                </div>
+            </div>
+        </footer>
+
+        <script type="module" src="../js/app.js"></script>
+    </body>
+</html>

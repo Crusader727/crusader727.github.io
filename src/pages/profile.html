@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Профиль — Resident Card 2.0</title>
+        <link rel="stylesheet" href="../css/app.css" />
+        <link rel="stylesheet" href="../css/dashboard.css" />
+        <link rel="stylesheet" href="../css/section.css" />
+    </head>
+    <body data-page="profile">
+        <div class="bg" aria-hidden="true"><div class="orb"></div><div class="orb"></div><div class="orb"></div><div class="bg-grid"></div></div>
+
+        <div class="section-page">
+            <header class="topbar">
+                <a href="dashboard.html" class="logo"><div class="logo-mark"></div><span>Resident Card</span></a>
+            </header>
+
+            <div class="profile-header reveal">
+                <div class="profile-avatar" aria-hidden="true"></div>
+                <div>
+                    <h1 style="font-size: 40px; font-weight: 900; letter-spacing: -2px">Александр</h1>
+                    <p style="color: var(--text-secondary); margin-top: 8px">Уровень доверия: <strong style="color: var(--accent-primary)">Высокий</strong></p>
+                </div>
+            </div>
+
+            <div class="profile-stats reveal">
+                <div class="glass-panel stat-card">
+                    <div class="stat-card__value">847</div>
+                    <div class="stat-card__label">Дней с нами</div>
+                </div>
+                <div class="glass-panel stat-card">
+                    <div class="stat-card__value">156</div>
+                    <div class="stat-card__label">Использовано льгот</div>
+                </div>
+                <div class="glass-panel stat-card">
+                    <div class="stat-card__value">23</div>
+                    <div class="stat-card__label">Подключённых сервисов</div>
+                </div>
+            </div>
+
+            <div class="catalog-grid">
+                <div class="glass-panel catalog-card reveal">
+                    <div class="catalog-card__icon">🔐</div>
+                    <div class="catalog-card__title">Безопасность</div>
+                    <div class="catalog-card__desc">Двухфакторная аутентификация, устройства, история входов</div>
+                </div>
+                <div class="glass-panel catalog-card reveal">
+                    <div class="catalog-card__icon">📱</div>
+                    <div class="catalog-card__title">Устройства</div>
+                    <div class="catalog-card__desc">iPhone 15, MacBook Pro — 2 активных</div>
+                </div>
+                <div class="glass-panel catalog-card reveal">
+                    <div class="catalog-card__icon">📊</div>
+                    <div class="catalog-card__title">История активности</div>
+                    <div class="catalog-card__desc">Последние действия в экосистеме</div>
+                </div>
+                <div class="glass-panel catalog-card reveal">
+                    <div class="catalog-card__icon">⚙️</div>
+                    <div class="catalog-card__title">Настройки</div>
+                    <div class="catalog-card__desc">Аккаунт, уведомления, конфиденциальность, интерфейс</div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="dock" aria-label="Навигация">
+            <div class="dock-item" data-page="dashboard.html" tabindex="0">🏠</div>
+            <div class="dock-item" data-page="cards.html" tabindex="0">💳</div>
+            <div class="dock-item" data-page="benefits.html" tabindex="0">🎁</div>
+            <div class="dock-item" data-page="services.html" tabindex="0">🧭</div>
+            <div class="dock-item dock-item--active" data-page="profile.html" tabindex="0" aria-current="page">👤</div>
+        </nav>
+        <script type="module" src="../js/app.js"></script>
+    </body>
+</html>
