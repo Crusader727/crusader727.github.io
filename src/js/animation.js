@@ -46,3 +46,53 @@ export function initSceneReveal() {
     const scene = document.querySelector(".dashboard-reveal");
     if (scene) observer.observe(scene);
 }
+
+export function initCircleExpansion() {
+    if (prefersReducedMotion()) return;
+    const identity = document.querySelector(".identity");
+    const regionSection = document.querySelector(".scene-region");
+    if (!identity || !regionSection) return;
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                identity.classList.toggle("identity--expanded", entry.isIntersecting);
+            });
+        },
+        { threshold: 0.15 }
+    );
+
+    observer.observe(regionSection);
+}
+
+export function initTrustCounters() {
+    const counters = $$("[data-count]");
+    if (!counters.length) return;
+
+    const animate = (el) => {
+        const target = parseInt(el.dataset.count, 10);
+        const duration = 1600;
+        const start = performance.now();
+        const tick = (now) => {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.round(eased * target);
+            if (progress < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+    };
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    animate(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.5 }
+    );
+
+    counters.forEach((c) => observer.observe(c));
+}

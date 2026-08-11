@@ -1,5 +1,5 @@
 import { initCursor, initIdentityParallax, initCardTilt, initTileParallax } from "./cursor.js";
-import { initReveal, initSceneReveal } from "./animation.js";
+import { initReveal, initSceneReveal, initCircleExpansion, initTrustCounters } from "./animation.js";
 import { initNavigation, initCommandPalette } from "./navigation.js";
 import { initSections } from "./sections.js";
 import { initSpotlightSearch } from "./search.js";
@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
     initTileParallax();
     initReveal();
     initSceneReveal();
+    initCircleExpansion();
+    initTrustCounters();
     initNavigation();
     initCommandPalette();
     initSpotlightSearch();

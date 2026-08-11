@@ -48,7 +48,7 @@
 
                 <div class="scene-arrival__actions">
                     <a href="dashboard.html" class="btn btn--primary">Начать →</a>
-                    <a href="#ecosystem" class="btn btn--glass">Узнать больше</a>
+                    <a href="#region" class="btn btn--glass">Узнать больше</a>
                 </div>
             </div>
 
@@ -60,7 +60,80 @@
             </div>
         </section>
 
-        <!-- Scene 02: Ecosystem -->
+        <!-- Scene 02: Region Map -->
+        <section class="scene-region section" id="region" aria-label="Регион">
+            <div class="container">
+                <div class="scene-region__header reveal">
+                    <div class="tag">Регион</div>
+                    <h2 class="text-display">Единое цифровое<br />пространство.</h2>
+                    <p>Сервисы, льготы и возможности — от центра до окраин. Вся инфраструктура региона на одной карте.</p>
+                </div>
+
+                <div class="region-map reveal" aria-label="Карта региона">
+                    <svg class="region-map__svg" viewBox="0 0 900 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Стилизованная карта региона с сервисами">
+                        <!-- Region shape -->
+                        <path class="region-map__shape" d="M180 80 Q300 30 500 60 Q700 90 780 180 Q830 280 790 380 Q740 470 600 500 Q450 530 300 490 Q160 450 120 350 Q90 250 130 150 Q150 100 180 80Z" fill="url(#regionGrad)" stroke="rgba(91,108,255,0.2)" stroke-width="1.5"/>
+                        <!-- Grid lines inside -->
+                        <line x1="200" y1="100" x2="750" y2="100" stroke="rgba(91,108,255,0.06)" stroke-width="0.5"/>
+                        <line x1="180" y1="200" x2="800" y2="200" stroke="rgba(91,108,255,0.06)" stroke-width="0.5"/>
+                        <line x1="150" y1="300" x2="810" y2="300" stroke="rgba(91,108,255,0.06)" stroke-width="0.5"/>
+                        <line x1="180" y1="400" x2="770" y2="400" stroke="rgba(91,108,255,0.06)" stroke-width="0.5"/>
+                        <line x1="350" y1="50" x2="350" y2="510" stroke="rgba(91,108,255,0.06)" stroke-width="0.5"/>
+                        <line x1="550" y1="50" x2="550" y2="510" stroke="rgba(91,108,255,0.06)" stroke-width="0.5"/>
+                        <!-- Connection lines -->
+                        <line class="region-map__line" x1="450" y1="240" x2="280" y2="150" stroke="rgba(91,108,255,0.15)" stroke-width="1"/>
+                        <line class="region-map__line" x1="450" y1="240" x2="650" y2="160" stroke="rgba(91,108,255,0.15)" stroke-width="1"/>
+                        <line class="region-map__line" x1="450" y1="240" x2="320" y2="350" stroke="rgba(91,108,255,0.15)" stroke-width="1"/>
+                        <line class="region-map__line" x1="450" y1="240" x2="600" y2="370" stroke="rgba(91,108,255,0.15)" stroke-width="1"/>
+                        <line class="region-map__line" x1="450" y1="240" x2="220" y2="280" stroke="rgba(91,108,255,0.15)" stroke-width="1"/>
+                        <line class="region-map__line" x1="450" y1="240" x2="700" y2="300" stroke="rgba(91,108,255,0.15)" stroke-width="1"/>
+                        <line class="region-map__line" x1="450" y1="240" x2="400" y2="430" stroke="rgba(91,108,255,0.15)" stroke-width="1"/>
+                        <defs>
+                            <radialGradient id="regionGrad" cx="50%" cy="45%" r="55%">
+                                <stop offset="0%" stop-color="rgba(91,108,255,0.08)"/>
+                                <stop offset="100%" stop-color="rgba(91,108,255,0.02)"/>
+                            </radialGradient>
+                        </defs>
+                    </svg>
+
+                    <!-- Service points -->
+                    <a href="services.html" class="region-point" style="top: 24%; left: 28%" data-label="Медицина">
+                        <span class="region-point__glow"></span><span class="region-point__dot"></span>
+                        <span class="region-point__label">🏥 Медицина</span>
+                    </a>
+                    <a href="services.html" class="region-point" style="top: 26%; left: 70%" data-label="Образование">
+                        <span class="region-point__glow"></span><span class="region-point__dot"></span>
+                        <span class="region-point__label">🎓 Образование</span>
+                    </a>
+                    <a href="cards.html" class="region-point region-point--center" style="top: 40%; left: 48%" data-label="Центр">
+                        <span class="region-point__glow region-point__glow--accent"></span><span class="region-point__dot region-point__dot--accent"></span>
+                        <span class="region-point__label">💳 Карта жителя</span>
+                    </a>
+                    <a href="services.html" class="region-point" style="top: 47%; left: 22%" data-label="ЖКХ">
+                        <span class="region-point__glow"></span><span class="region-point__dot"></span>
+                        <span class="region-point__label">🏠 ЖКХ</span>
+                    </a>
+                    <a href="services.html" class="region-point" style="top: 52%; left: 76%" data-label="Транспорт">
+                        <span class="region-point__glow"></span><span class="region-point__dot"></span>
+                        <span class="region-point__label">🚌 Транспорт</span>
+                    </a>
+                    <a href="benefits.html" class="region-point" style="top: 62%; left: 33%" data-label="Культура">
+                        <span class="region-point__glow"></span><span class="region-point__dot"></span>
+                        <span class="region-point__label">🎭 Культура</span>
+                    </a>
+                    <a href="services.html" class="region-point" style="top: 67%; left: 62%" data-label="Госуслуги">
+                        <span class="region-point__glow"></span><span class="region-point__dot"></span>
+                        <span class="region-point__label">📋 Госуслуги</span>
+                    </a>
+                    <a href="documents.html" class="region-point" style="top: 76%; left: 42%" data-label="Документы">
+                        <span class="region-point__glow"></span><span class="region-point__dot"></span>
+                        <span class="region-point__label">📄 Документы</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scene 03: Ecosystem -->
         <section class="scene-ecosystem section" id="ecosystem" aria-label="Экосистема">
             <div class="container">
                 <div class="scene-ecosystem__header reveal">
@@ -131,9 +204,25 @@
             </div>
         </section>
 
-        <!-- CTA -->
+        <!-- CTA + Trust Metrics -->
         <section class="scene-cta section" id="cta" aria-label="Призыв к действию">
             <div class="container reveal">
+                <div class="trust-metrics" aria-label="Статистика региона">
+                    <div class="trust-metric">
+                        <span class="trust-metric__value" data-count="120">0</span>
+                        <span class="trust-metric__label">сервисов региона</span>
+                    </div>
+                    <div class="trust-metric">
+                        <span class="trust-metric__value" data-count="2">0</span>
+                        <span class="trust-metric__unit">млн</span>
+                        <span class="trust-metric__label">жителей</span>
+                    </div>
+                    <div class="trust-metric">
+                        <span class="trust-metric__value" data-count="1">1</span>
+                        <span class="trust-metric__label">приложение</span>
+                    </div>
+                </div>
+
                 <h2 class="text-h1">Ваш регион.<br />В одном приложении.</h2>
                 <p>Начните использовать цифровую экосистему уже сегодня.</p>
                 <div class="scene-cta__actions">

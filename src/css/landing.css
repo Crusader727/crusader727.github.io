@@ -61,7 +61,183 @@
 }
 
 /* ==========================
-   LANDING — Scene 02 Ecosystem
+   LANDING — Identity Circle Expansion
+========================== */
+
+.scene-arrival .identity-ring {
+    transition: transform 1.2s var(--ease), opacity 1.2s var(--ease);
+}
+
+.identity--expanded .identity-ring:nth-child(1) {
+    transform: scale(3.5);
+    opacity: 0;
+}
+
+.identity--expanded .identity-ring:nth-child(2) {
+    transform: scale(4.5);
+    opacity: 0;
+}
+
+.identity--expanded .identity-ring:nth-child(3) {
+    transform: scale(5.5);
+    opacity: 0;
+}
+
+.identity--expanded .identity-core {
+    transform: scale(0.6);
+    opacity: 0;
+    transition: transform 0.8s var(--ease), opacity 0.6s var(--ease);
+}
+
+/* ==========================
+   LANDING — Scene 02 Region Map
+========================== */
+
+.scene-region {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-block: var(--space-16);
+}
+
+.scene-region__header {
+    text-align: center;
+    margin-bottom: var(--space-8);
+}
+
+.scene-region__header h2 {
+    margin-top: var(--space-3);
+}
+
+.scene-region__header p {
+    margin-top: var(--space-3);
+    font-size: var(--font-body-lg);
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+.region-map {
+    position: relative;
+    width: min(900px, 100%);
+    height: auto;
+    aspect-ratio: 900 / 560;
+    margin-inline: auto;
+}
+
+.region-map__svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.region-map__shape {
+    transition: fill 0.6s var(--ease);
+}
+
+.region-map__line {
+    stroke-dasharray: 6 4;
+    animation: dashFlow 12s linear infinite;
+}
+
+@keyframes dashFlow {
+    to { stroke-dashoffset: -60; }
+}
+
+/* Service points on map */
+
+.region-point {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+}
+
+.region-point__dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+    position: relative;
+    z-index: 2;
+    transition: transform var(--duration-small) var(--ease);
+    box-shadow: 0 0 12px rgba(91, 108, 255, 0.4);
+    flex-shrink: 0;
+}
+
+.region-point__dot--accent {
+    width: 20px;
+    height: 20px;
+    background: var(--gradient-blue);
+    box-shadow: 0 0 24px rgba(91, 108, 255, 0.6);
+}
+
+.region-point__glow {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(91, 108, 255, 0.12);
+    top: 50%;
+    left: 0;
+    transform: translate(calc(-50% + 7px), -50%);
+    animation: pointPulse 3s ease-in-out infinite;
+    z-index: 1;
+}
+
+.region-point__glow--accent {
+    width: 60px;
+    height: 60px;
+    background: rgba(91, 108, 255, 0.18);
+    transform: translate(calc(-50% + 10px), -50%);
+}
+
+@keyframes pointPulse {
+    0%, 100% { transform: translate(calc(-50% + 7px), -50%) scale(1); opacity: 0.7; }
+    50% { transform: translate(calc(-50% + 7px), -50%) scale(1.5); opacity: 0.2; }
+}
+
+.region-point__label {
+    padding: 8px 16px;
+    border-radius: var(--radius-round);
+    background: var(--surface);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-sm);
+    font-weight: 600;
+    font-size: var(--font-caption);
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: opacity var(--duration-small) var(--ease),
+        transform var(--duration-small) var(--ease);
+    pointer-events: none;
+}
+
+.region-point:hover .region-point__label,
+.region-point:focus-visible .region-point__label {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.region-point:hover .region-point__dot {
+    transform: scale(1.4);
+}
+
+.region-point:focus-visible {
+    outline: none;
+}
+
+.region-point:focus-visible .region-point__dot {
+    box-shadow: 0 0 0 3px rgba(91, 108, 255, 0.4), 0 0 20px rgba(91, 108, 255, 0.4);
+}
+
+/* ==========================
+   LANDING — Scene 03 Ecosystem
 ========================== */
 
 .scene-ecosystem {
@@ -125,60 +301,58 @@ a.ecosystem-tile:focus-visible {
     z-index: 10;
 }
 
-.ecosystem-tile__icon {
-    font-size: 28px;
-    margin-bottom: var(--space-1);
+.ecosystem-tile:nth-child(1)  { top: 5%;  left: 8%;  animation-delay: 0s; }
+.ecosystem-tile:nth-child(2)  { top: 15%; left: 55%; animation-delay: 1s; }
+.ecosystem-tile:nth-child(3)  { top: 45%; left: 3%;  animation-delay: 2s; }
+.ecosystem-tile:nth-child(4)  { top: 55%; left: 40%; animation-delay: 0.5s; }
+.ecosystem-tile:nth-child(5)  { top: 10%; left: 78%; animation-delay: 1.5s; }
+.ecosystem-tile:nth-child(6)  { top: 65%; left: 70%; animation-delay: 2.5s; }
+.ecosystem-tile:nth-child(7)  { top: 75%; left: 20%; animation-delay: 3s; }
+.ecosystem-tile:nth-child(8)  { top: 30%; left: 30%; animation-delay: 1.2s; }
+.ecosystem-tile:nth-child(9)  { top: 35%; left: 68%; animation-delay: 0.8s; }
+.ecosystem-tile:nth-child(10) { top: 80%; left: 50%; animation-delay: 2.2s; }
+
+/* ==========================
+   LANDING — Trust Metrics (Biofarma-inspired)
+========================== */
+
+.trust-metrics {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-10);
+    margin-bottom: var(--space-10);
 }
 
-.ecosystem-tile:nth-child(1) {
-    top: 5%;
-    left: 8%;
-    animation-delay: 0s;
+.trust-metric {
+    text-align: center;
 }
-.ecosystem-tile:nth-child(2) {
-    top: 15%;
-    left: 55%;
-    animation-delay: 1s;
+
+.trust-metric__value {
+    font-size: clamp(56px, 8vw, 96px);
+    font-weight: 900;
+    letter-spacing: -4px;
+    line-height: 1;
+    background: var(--gradient-blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
 }
-.ecosystem-tile:nth-child(3) {
-    top: 45%;
-    left: 3%;
-    animation-delay: 2s;
+
+.trust-metric__unit {
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 800;
+    color: var(--accent-primary);
+    margin-left: 4px;
 }
-.ecosystem-tile:nth-child(4) {
-    top: 55%;
-    left: 40%;
-    animation-delay: 0.5s;
-}
-.ecosystem-tile:nth-child(5) {
-    top: 10%;
-    left: 78%;
-    animation-delay: 1.5s;
-}
-.ecosystem-tile:nth-child(6) {
-    top: 65%;
-    left: 70%;
-    animation-delay: 2.5s;
-}
-.ecosystem-tile:nth-child(7) {
-    top: 75%;
-    left: 20%;
-    animation-delay: 3s;
-}
-.ecosystem-tile:nth-child(8) {
-    top: 30%;
-    left: 30%;
-    animation-delay: 1.2s;
-}
-.ecosystem-tile:nth-child(9) {
-    top: 35%;
-    left: 68%;
-    animation-delay: 0.8s;
-}
-.ecosystem-tile:nth-child(10) {
-    top: 80%;
-    left: 50%;
-    animation-delay: 2.2s;
+
+.trust-metric__label {
+    display: block;
+    font-size: var(--font-caption);
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-top: var(--space-1);
+    letter-spacing: 0.03em;
 }
 
 /* ==========================
@@ -283,6 +457,19 @@ a.ecosystem-tile:focus-visible {
 }
 
 @media (max-width: 768px) {
+    .region-map {
+        aspect-ratio: auto;
+        height: 400px;
+    }
+
+    .region-point__label {
+        display: none;
+    }
+
+    .trust-metrics {
+        gap: var(--space-5);
+    }
+
     .ecosystem-grid {
         height: auto;
         display: grid;

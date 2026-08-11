@@ -174,9 +174,23 @@ export function initQrOverlay() {
     });
 }
 
+function initDivisionCards() {
+    $$("[data-filter-target]").forEach((card) => {
+        card.addEventListener("click", (e) => {
+            const target = card.dataset.filterTarget;
+            const chip = $(`.filter-bar .chip[data-filter="${target}"]`);
+            if (chip) {
+                chip.click();
+                chip.scrollIntoView({ behavior: "smooth", block: "center" });
+            }
+        });
+    });
+}
+
 export function initSections() {
     initFilterBar();
     initCardSwitcher();
     initFavorites();
     initQrOverlay();
+    initDivisionCards();
 }
