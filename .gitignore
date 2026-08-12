@@ -1,0 +1,5 @@
+.DS_Store
+
+# Local Claude Code settings & MCP config — MUST stay out of git (contain API keys)
+.claude/settings.local.json
+.mcp.json

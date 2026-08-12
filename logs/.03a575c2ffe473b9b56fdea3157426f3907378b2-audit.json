@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/crusader/Desktop/crusader727.github.io/logs/.03a575c2ffe473b9b56fdea3157426f3907378b2-audit.json",
+    "files": [
+        {
+            "date": 1786558314533,
+            "name": "/Users/crusader/Desktop/crusader727.github.io/logs/mcp-puppeteer-2026-08-12.log",
+            "hash": "29aa2032cab8c6f146f402fa962260acc6b5f04e702d014b1dd80e691c327214"
+        }
+    ],
+    "hashType": "sha256"
+}
