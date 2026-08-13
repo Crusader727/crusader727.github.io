@@ -3,3 +3,6 @@
 # Local Claude Code settings & MCP config — MUST stay out of git (contain API keys)
 .claude/settings.local.json
 .mcp.json
+
+# Runtime / service artifacts
+logs/

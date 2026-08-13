@@ -31,7 +31,7 @@ Frontend:
 # Структура проекта
 
 ```
-src/
+versions/original/   (ранее src/)
 
 assets/
 │
